@@ -10,5 +10,7 @@ public class App {
         int x = leitor.nextInt();
 
         System.out.println("\n\n\nX = " + x);
+
+        leitor.close();
     }
 }
