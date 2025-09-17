@@ -18,7 +18,7 @@ public class Tipos {
         // Caracter: char(16 bits)
         char x = 'p';
         // Lógico: boolean(true/false)
-        boolean y = true || false;
+        boolean y = true && false;
         // String (NÃO É UM TIPO PRIMITIVO!!!)
         String z = "Loren ipsun";
 
