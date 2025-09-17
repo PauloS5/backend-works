@@ -27,8 +27,8 @@ public class Tipos {
         System.out.printf("b = %d\n", b);
         System.out.printf("c = %d\n", c);
         System.out.printf("d = %d\n", d);
-        System.out.printf("m = %f\n", m);
-        System.out.printf("n = %f\n", n);
+        System.out.printf("m = %7f\n", m);
+        System.out.printf("n = %16f\n", n);
         System.out.printf("x = %c\n", x);
         System.out.printf("y = %b\n", y);
         System.out.printf("z = %s\n", z);
