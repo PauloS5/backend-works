@@ -1,0 +1,64 @@
+classDiagram
+    %% Classes
+    class Paciente {
+        + id: long
+        + nome: idade
+        + email: String
+        + telefone: String
+        + dataNascimeno: Date
+        + grupoSanguineo: String
+        + sexo: String
+        + cep: String
+        + endereco: String
+        + cidade: String
+        + estado: String
+    }
+    class Atendimento {
+        + id: Long
+        + data: Date
+        + hora: Date
+        + valor: Double
+        + status: String
+        + obsevacao: String
+    }
+    class Profissional {
+        + id: Long
+        + nome: String
+        + registroConselho: String
+        + telefone: String
+        + email: String
+    }
+    class Usuario {
+        + id: Long
+        + nomecompleto: String
+        + nomeUsuario: String
+        + senha: String
+        + ativo: Boolean
+        + papel: String
+    }
+    class Convenio {
+        + id: Long
+        + nome: String: String
+        + razaoSocial: String
+        + cnpj: String
+        + representante: String
+        + email: String
+        + telefone: String
+        + ativo: Boolean
+    }
+    class Unidade {
+        + id: Long
+        + nome: String
+        + endereco: String
+    }
+    class Especialidade {
+        + id: Long
+        + nome: String
+    }
+
+    %% RelacionandoX
+    Paciente "1..1" -- "0..*" Atendimento: paciente 
+    Atendimento "0..*" -- "1..1" Profissional: profissional
+    Profissional "0..*" -- "1..1" Unidade: unidade
+    Profissional "0..*" -- "1..1" Especialidade: especialidade
+    Atendimento "0..*" -- "0..1" Convenio: convenio
